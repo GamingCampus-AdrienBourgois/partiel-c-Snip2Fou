@@ -31,8 +31,11 @@ float Solution2::GetBalance(const std::string& accountName)
 				solde -= std::stof(value);
 			}
         }
+		return solde;
 	}
-	return solde;
+	else {
+		return false;
+	}
 }
 
 #endif
