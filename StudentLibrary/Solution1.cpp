@@ -11,21 +11,21 @@ float Solution1::ConvertTemperature(float _value, TemperatureUnits _from, Temper
 			return 9.0/5.0 * (_value  +32);
 		}
 		else if (_to == TemperatureUnits::KELVIN) {
-			return _value + 273;
+			return _value + 273.15;
 		}
 	}else if(_from == TemperatureUnits::FAHRENHEIT) {
 		if (_to == TemperatureUnits::CELSIUS) {
 			return 5.0/9.0 *(_value - 32);
 		}
 		else if (_to == TemperatureUnits::KELVIN) {
-			return 5.0/9.0 *(_value - 32) + 273;
+			return 5.0/9.0 *(_value - 32) + 273.15;
 		}
 	}else if (_from == TemperatureUnits::KELVIN) {
 		if (_to == TemperatureUnits::CELSIUS) {
-			return  _value - 273;
+			return  _value - 273.15;
 		}
 		else if (_to == TemperatureUnits::FAHRENHEIT) {
-			return 9.0/5.0 *(_value - 273) + 32;
+			return 9.0/5.0 *(_value - 273.15) + 32;
 		}
 	}
 }
