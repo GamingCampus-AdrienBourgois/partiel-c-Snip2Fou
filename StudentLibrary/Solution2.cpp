@@ -3,6 +3,7 @@
 #include <ostream>
 
 #include <fstream>
+#include <iostream>
 
 // Don't forget to enable the exercise in the SudentConfiguration.h file !
 #include "StudentConfiguration.h"
@@ -29,6 +30,7 @@ float Solution2::GetBalance(const std::string& accountName)
 			}else if(action == "WITHDRAW") {
 				solde -= std::stoi(value);
 			}
+			std::cout << solde << std::endl;
         }
 	}
 }
