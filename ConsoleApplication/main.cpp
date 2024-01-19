@@ -10,6 +10,7 @@ int main(int argc, char** argv)
 #ifndef AUTOGRADING
 
 	std::cout << "Local test" << std::endl;
+	
 
 	/*------------------------------ !!! Don't touch above !!! ------------------------------*/
 	/*------------------------------------ STUDENT MAIN ------------------------------------*/

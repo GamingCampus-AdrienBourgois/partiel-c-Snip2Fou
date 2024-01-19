@@ -37,6 +37,7 @@ float Solution2::GetBalance(const std::string& accountName)
 	}
 	else {
 		std::cerr << "Impossible d'ouvrir le fichier !" << std::endl;
+		return EXIT_FAILURE;
 	}
 }
 
