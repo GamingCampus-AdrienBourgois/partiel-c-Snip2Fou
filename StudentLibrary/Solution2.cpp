@@ -26,13 +26,13 @@ float Solution2::GetBalance(const std::string& accountName)
             action = ligne.substr(0, position);
 			value = ligne.substr(position + 1, std::string::npos);
 			if (action == "DEPOSIT") {
-				solde += std::stoi(value);
+				solde += std::stof(value);
 			}else if(action == "WITHDRAW") {
-				solde -= std::stoi(value);
+				solde -= std::stof(value);
 			}
-			std::cout << solde << std::endl;
         }
 	}
+	return solde;
 }
 
 #endif
