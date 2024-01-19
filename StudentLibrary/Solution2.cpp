@@ -18,24 +18,28 @@ float Solution2::GetBalance(const std::string& accountName)
 
 	std::ifstream myfile("BankAccount/" + accountName + ".txt");
 	if (myfile.is_open()) {
-		std::string ligne;
+			std::string ligne;
 		std::string delimiter = " ";
-        while (std::getline(myfile, ligne)) {
-            size_t position = 0;
+		while (std::getline(myfile, ligne)) {
+			size_t position = 0;
 			position = ligne.find(delimiter);
-            action = ligne.substr(0, position);
+			action = ligne.substr(0, position);
 			value = ligne.substr(position + 1, std::string::npos);
 			if (action == "DEPOSIT") {
 				solde += std::stof(value);
-			}else if(action == "WITHDRAW") {
+			}
+			else if (action == "WITHDRAW") {
 				solde -= std::stof(value);
 			}
-        }
+		}
+		myfile.close();
 		return solde;
 	}
 	else {
-		return false;
+		std::cerr << "Impossible d'ouvrir le fichier !" << std::endl;
 	}
+
+	
 }
 
 #endif
