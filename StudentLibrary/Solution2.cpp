@@ -15,7 +15,7 @@ float Solution2::GetBalance(const std::string& accountName)
 	std::string action = "";
 	std::string value = "";
 
-	std::ifstream myfile(accountName + ".txt");
+	std::ifstream myfile("BankAccount/" + accountName + ".txt");
 	if (myfile.is_open()) {
 		std::string ligne;
 		std::string delimiter = " ";
